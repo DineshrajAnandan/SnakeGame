@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Snake Game</title>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="title-and-options">
+        <span style="color: black;">Snake</span>
+        <span style="color: red;">Game</span>
+        <select id="select-snake-speed">
+            <option value="500">Normal</option>
+            <option value="250">Medium</option>
+            <option value="100">Fast</option>
+        </select>
+        <button onclick="start()" class="start-button"> Start </button>
+        <button onclick="setHaltProcess()" class="halt-button"> Halt </button>
+    </div>
+
+    <div id="game-screen">
+        <div id="scoreBoard">
+            Score :
+            <span id="score-count"> 0 </span>
+        </div>
+        <div id="gameOver-Message">
+            Game Over!
+        </div>
+        <div class="table-container"></div>
+        <div id="game-controls">
+            <!-- up arrow -->
+            <span onclick="setMoveProp(false, false)">&#8593;</span>
+            <!-- left arrow -->
+            <span onclick="setMoveProp(true, false)">&#8592;</span>
+            <!-- down arrow -->
+            <span onclick="setMoveProp(false, true)">&#8595;</span>
+            <!-- right arrow -->
+            <span onclick="setMoveProp(true, true)">&#8594;</span>
+            <span style="color: rgb(190, 180, 180);">/</span>
+            <span class="wasd-icons" onclick="setMoveProp(false, false)">W</span>
+            <span class="wasd-icons" onclick="setMoveProp(true, false)">A</span>
+            <span class="wasd-icons" onclick="setMoveProp(false, true)">S</span>
+            <span class="wasd-icons" onclick="setMoveProp(true, true)">D</span>
+        </div>
+    </div>
+</body>
+
+</html>
